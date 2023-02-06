@@ -1,9 +1,100 @@
+/* VARIABLES------------------------------ */
+:root {
+  --primary-blue: #001f4d;
+  --primary-black: black;
+  --primary-orange: #ff5f1f;
+  --header-height: 6rem;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Racing Sans One", cursive;
 }
 
 body {
-  background-color: #001f4d;
+  background-color: var(--primary-black);
+  color: white;
+}
+
+/* HEADER-------------------------------- */
+header {
+  position: fixed;
+  height: var(--header-height);
+  background-color: var(--primary-blue);
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  margin-left: 20px;
+}
+header img {
+  margin-right: 20px;
+}
+
+/* MAIN------------------------------------ */
+
+.slogan {
+  margin: 1rem;
+  text-align: center;
+}
+
+.logo-div {
+  display: flex;
+  justify-content: center;
+  margin: var(--header-height) 1rem 1rem 1rem;
+}
+
+.logotype {
+  width: 100%;
+}
+
+.card {
+  margin: 1rem;
+  border: 0.3rem solid var(--primary-blue);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* .card:hover,
+.card img {
+  scale: 1.1;
+} */
+
+.card img {
+  width: 100%;
+  transition: transform 0.3s;
+}
+
+/* .card:hover .card img,
+.card:focus .card img {
+  transform: scale(1.1);
+} */
+
+.card img:hover {
+  transform: scale(0.8);
+}
+
+.card-text-container {
+  margin: 0 0.5rem 1rem;
+}
+
+.card-topic {
+  font-size: large;
+}
+
+.card-price {
+  font-size: small;
+}
+
+.card-description {
+  font-size: smaller;
 }
